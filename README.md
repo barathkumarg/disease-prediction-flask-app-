@@ -44,15 +44,17 @@
 5.Collection -->  pip install collection
 
 
+
+
 **Project Files and its functions** [read if new to python flask]
 
 1.pima-indians-diabetics.csv and heart_disease dataset.csv are the dataset files downloaded from kaggle
 
-2. .ipynb extension files are the python notebook files used for exploratory data analysis try to open these .ipynb files in Jypter Notebook or in google colab
+2..ipynb extension files are the python notebook files used for exploratory data analysis try to open these .ipynb files in Jypter Notebook or in google colab
 
 3.model.py file is the file where you create the model files for prediction using pickle (it is like mod file) [as the result it creates .pkl files which is the model files used for prediction ]
 
-4. .pkl extension files model files created by model.py file
+4..pkl extension files model files created by model.py file
 
 5.templates folder contains the html files to be hosted in web [the template folder cannot be renamed it is structured by jinja template]
 
