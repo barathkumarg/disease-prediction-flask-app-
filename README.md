@@ -63,4 +63,11 @@
 7.app.py is the flask file where url links, functions and return render statements
 
 
+
+
+**Blog site**
+
+https://mlaiprojects.blogspot.com/2021/06/disease-prediction-with-flask-deployment.html
+
+
  
