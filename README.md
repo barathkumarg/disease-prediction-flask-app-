@@ -1,6 +1,6 @@
 # disease-prediction-flask-app-
 
-##prerequisite
+**prerequisite**
 
 1.Basic python 
 
