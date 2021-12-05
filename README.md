@@ -1,3 +1,7 @@
+# About
+Helps the medical practioner to predict the disease faster and helps them to easily the find the people who's life is at risk.
+
+
 # disease-prediction-flask-app-
 
 **prerequisite**
