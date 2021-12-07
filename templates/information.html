@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>
+            Disease Prediction | About Project
+        </title>
+        <link rel="stylesheet" href="{{url_for('static', filename='informationStyle.css')}}">
+        <meta name="viewport" content = "width=device-width,initial-scale=1">
+    </head>
+    <body>
+        <header>
+            DISEASE PREDICTION
+        </header>
+        <div class="heart-name">
+            <img src="{{url_for('static', filename='doctor.png')}}">
+            <p>HEART DISEASE</p>
+        </div>
+        <center><p class = "dataset"> 
+            <span>
+                Data set : 
+            </span>
+            Public Health Dataset
+        </p></center>
+        <p class= "description">
+            <span >Description : </span> This data set dates from 1988 and consists of four databases: Cleveland, Hungary
+            Switzerland, and Long Beach V. It contains 76 attributes, including the predicted attribute, but all
+            published experiments refer to using a subset of 14 of them. The &quot;target&quot; field refers to the presence
+            of heart disease in the patient. It is integer valued 0 = no disease and 1 = disease.
+        </p>
+        <p class = "attribute"> 
+            <span>Attributes : </span>
+            <!-- Complete the List of attributes in the below-->
+            <ol class="list">
+                <li>Age</li>
+                <li>Sex</li>
+                <li>Chest pain type (4 values)</li>
+                <li>resting blood pressure</li>
+                <li>serum cholesterol in mg/dl</li>
+                <li>fasting blood sugar &gt; 120 mg/dl</li>
+                <li>resting electrocardiographic results (values 0,1,2)</li>
+                <li>maximum heart rate achieved</li>
+                <li>exercise induced angina</li>
+                <li>old peak = ST depression induced by exercise relative to rest</li>
+                <li>the slope of the peak exercise ST segment</li>
+                <li>number of major vessels (0-3) coloured by fluoroscopy</li>
+                <li>thal: 0 = normal; 1 = fixed defect; 2 = reversable defect</li>
+                <li>The names and social security numbers of the patients were recently removed from the
+                    database, replaced with dummy values</li>
+
+            </ol>
+        </p>
+        <p class="algorithm" >
+            <span>Algorithm Used : </span><br>
+            <b>Logistic Regression : </b> Accuracy: <div class="container"><div class="acc log">82%</div></div> <br>
+            <b style="padding-left: 40px;font-size: 20px;">Decision tree : </b> Accuracy :<div class="container"><div class="acc deci">69%</div></div><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>SVM : </b> Accuracy: <div class="container"><div class="acc log">81%</div></div> <br>
+        </p><br><br><br>
+        <!-- Diabetics-->
+        <hr class="striped-border">
+        <div class="heart-name">
+            <img src="{{url_for('static', filename='2.png')}}">
+            <p>DIABETICS</p>
+        </div>
+        <center><p class = "dataset"> 
+            <span>
+                Data set : 
+            </span>
+            Diabetics dataset
+        </p></center>
+        <p class= "description">
+            <span >Description : </span> The data was collected and made available by “National Institute of Diabetes and
+            Digestive and Kidney Diseases” as part of the Pima Indians Diabetes Database. Several constraints
+            were placed on the selection of these instances from a larger database. In particular, all patients
+            here belong to the Pima Indian heritage (subgroup of Native Americans), and are females of ages 21
+            and above.<br><br>
+            We’ll be using Python and some of its popular data science related packages. First of all, we will
+            import pandas to read our data from a CSV file and manipulate it for further use. We will also use
+            NumPy to convert out data into a format suitable to feed our classification model. We’ll use seaborn
+            and matplotlib for visualizations. We will then import Logistic Regression algorithm from sklearn.
+            This algorithm will help us build our classification model. Lastly, we will use joblib available in sklearn
+            to save our model for future use.
+        </p>
+        <p class = "attribute"> 
+            <span>Attributes : </span>
+            <ol class="list">
+                <li>Glucose ranges(70-200mg /DL)</li>
+                <li>Blood Pressure</li>
+                <li>Skin Thickness</li>
+                <li>BMI</li>
+                <li>Diabetes Pedigree Function</li>
+                <li>Age</li>
+                <li>Outcome</li>
+            </ol>
+        </p>
+        <p class="algorithm" >
+            <span>Algorithm Used : </span><br>
+            <b>Logistic Regression : </b> Accuracy: <div class="container"><div class="acc log2">77 %</div></div> <br>
+            <b style="padding-left: 40px;font-size: 20px;">Decision tree : </b> Accuracy :<div class="container"><div class="acc deci">67%</div></div><br>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>SVM : </b> Accuracy: <div class="container"><div class="acc log2">76 %</div></div> <br>
+        </p>
+        <p class="description about" >
+            <span>Website Implementation :</span><br>
+            For the user understanding purpose we developed the Web site with the help of Flask which
+            is one of the libraries in python and also mini web framework.
+        </p>
+        <br><br>
+        <h1 class="testimonial">Contact Us</h1>
+        <div class="contact">
+            <div>
+                <img src="{{url_for('static', filename='avator.png')}}">
+                <br><br>
+                Barathkumar G
+                barathkumar.cs19@bitsathy.ac.in
+                Bannari Amman Institute Of Technology
+            </div>
+            <div>
+                <img src="{{url_for('static', filename='avator.png')}}">
+                <br><br>
+                Ajay S<br>
+                ajays.cs19@bitsathy.ac.in<br>
+                Bannari Amman Institute Of Technology
+            </div>
+            <div>
+                <img src="{{url_for('static', filename='avator.png')}}">
+                <br><br>
+                Dhanush S
+                dhanushs.cs19@bitsathy.ac.in
+                Bannari Amman Institute Of Technology                
+            </div>
+        </div>
+    </body>
+</html>

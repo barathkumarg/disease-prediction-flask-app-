@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+            Disease Prediction
+        </title>
+        <link rel="stylesheet"  href="{{url_for('static', type= 'text/css', filename='style.css')}}">
+        <meta name="viewport" content="width=device-width ,initial-scale = 1">
+
+    </head>
+    <body>
+        <img src = "{{url_for('static', filename='homepage.jpg')}}" width="100%" height="600px" class="image">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href=contact>About Project</a>
+
+            
+        </div>
+        <div style="font-size:30px;cursor:pointer;position: absolute; top:30;left:40;color:azure" onclick="openNav()">&#9776;</div>
+        <h1 class = "title"><span class="changecolor">D</span>ISEASE <span class="changecolor">P</span>REDICTION</h1>
+        <a href="#gotoproject" class="button" >Projects</a>
+        <center><p class="sub-project">PROJECTS</p></center>
+        <div class="main-content" id ="gotoproject">
+            <div class = "one">
+              <a href=diabetics>  <img src = "{{url_for('static', filename='Diabetics.png')}}"></a>
+                <br><br>
+                <center><span class="category">Diabetics</span></center>
+            </div>
+            <div class = "two">
+              <a href=heart_disease>  <img src="{{url_for('static', filename='heart.png')}}"></a>
+                <br><br>
+                <center><span class="category">Heart Disease</span></center>
+            </div>
+        </div>
+
+
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </body>
+</html>

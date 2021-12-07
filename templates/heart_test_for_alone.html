@@ -1,0 +1,235 @@
+<html>
+    <head>
+        <title>Heart Disease | Test for alone</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='secondaryStyles.css')}}">
+        <meta name="viewport" content = "width=device-width,initial-scale=1">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+            .main_form
+            {
+                width:800px;
+                height:500px;
+                
+                margin-top:50px;
+                margin-left:300px;
+            }
+
+            .title
+            {
+                font-family:"Exo 2";
+                color:grey;
+                font-size:50px;
+                padding-left:180px;
+                margin-top: 20px;
+            }
+
+            input
+            {
+                -moz-border-radius: 15px;
+                border-radius: 30px;
+                border:solid 1px rgba(210, 212, 193);
+                height:50px;
+                width:400px;
+                outline: none;
+                background-color:rgba(210, 212, 193);
+                padding-left: 20px;
+                font-size:15px;
+                font-family: "Balsamiq Sans";
+
+            }
+
+            .input_field
+            {
+                padding-left:225;
+                padding-top:50;
+            }
+            
+            .employees
+            {
+                -moz-border-radius: 15px;
+                border-radius: 30px;
+                border:solid 1px rgba(210, 212, 193);
+                height:50px;
+                width:400px;
+                outline: none;
+                background-color:rgba(210, 212, 193);
+                padding-left: 20px;
+                padding-right:20px;
+                font-size:15px;
+                font-family: "Balsamiq Sans";
+            }
+            .submit
+                {
+                background-color:#3ae0b1;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-bottom:100px;
+                }
+             .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {background-color: #e600e6;}
+
+
+        </style>
+
+    </head>
+    <body>
+        <header>HEART DISEASE
+             <div style="float:right;"><a href="/"><button class="button button2"> Back</button></a></div></header>
+        </header>
+        
+        <div class="navigation-bar">
+            <a href="heart_disease"><div class = "alone">Test for alone</div></a>
+            <a href="heart_disease_many"><div class = "many">Test for many</div></a>
+
+        </div>
+          
+        <!--Form for test for alone-->
+        <form action="{{ url_for('predict_heart_alone')}}" method="post">
+            <div class="main_form"  >
+                <div class = "title">
+                    Test For alone Form
+                </div>
+                <!--copy and paste the below div tag to new text box-->
+                <div class="input_field">
+                    <input type="number" placeholder="Enter your age.." name="age" required/>
+                </div>
+                
+                <div class="input_field">
+                    <select class = "employees" placeholder="Select Gender" name = "gender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value=1>Male</option>
+                        <option value=0>Female</option>
+                    </select>
+                </div>
+
+                <div class="input_field">
+                    <select class = "employees" placeholder="Select Chest Pain Type" name = "cp" required>
+                        <option value="" disabled selected>Select Chest Pain Type</option>
+                        <option value=0>Low</option>
+                        <option value=1>Moderate</option>
+                        <option value=2>High</option>
+                        <option value=3>Very High</option>
+                    </select>
+                </div>
+
+                <div class="input_field">
+                    <input type="number" placeholder="Select resting blood pressure (range:90-160 mmHg)" name = "rbp" required/>
+                </div>
+
+                 <div class="input_field">
+                    <input type="number" placeholder="Select serum cholesterol in mg/dl (range:100-300 mg/dl )" name = "chol" required/>
+                </div>
+
+                <div class="input_field">
+                    <select class = "employees" placeholder="Select Fasting Pressure" name = "fpr" required>
+                        <option value="" disabled selected>Select Fasting Pressure</option>
+                        <option value=1>Yes</option>
+                        <option value=0>No</option>
+                    </select>
+                </div>
+
+
+                <div class="input_field">
+                    <select class = "employees" placeholder="Select resting electro cardiographic results " name = "ecr" required>
+                        <option value="" disabled selected>Select resting electro cardiographic results </option>
+                        <option value=0>Low</option>
+                        <option value=1>Normal</option>
+                        <option value=2>High</option>
+
+                    </select>
+                </div>
+
+                <div class="input_field">
+                    <input type="number" placeholder="Select maximum heart rate achieved range(40-100)" name = "mx_heart" required/>
+                </div>
+
+                <div class="input_field">
+                    <select class = "employees" placeholder="Select exercise induced angina " name = "eia" required>
+                        <option value="" disabled selected>Select exercise induced angina </option>
+                        <option value=0>Yes</option>
+                        <option value=1>No</option>
+
+
+                    </select>
+                </div>
+
+                <div class="input_field">
+                    <input type="number" placeholder="Select old peak value (range-1 to 5)" name = "op" required/>
+                </div>
+
+
+
+                <div class="input_field">
+                    <select class = "employees" placeholder="Select slope of the peak exercise ST segment " name = "st" required>
+                        <option value="" disabled selected>Select slope of the peak exercise ST segment </option>
+                        <option value=0>Nil</option>
+                        <option value=1>Normal</option>
+                        <option value=2>Peak</option>
+
+
+                    </select>
+                </div>
+
+
+                <div class="input_field">
+                    <select class = "employees" placeholder="Select number of major vessels (0-3) coloured by fluoroscopy " name = "vf" required>
+                        <option value="" disabled selected>Select number of major vessels (0-3) coloured by fluoroscopy </option>
+                        <option value=0>Type 1</option>
+                        <option value=1>Type 2</option>
+                        <option value=2>Type 3</option>
+                        <option value=3>Type 4</option>
+
+
+                    </select>
+                </div>
+
+                <div class="input_field">
+                    <select class = "employees" placeholder="Select Thal type " name = "thal" required>
+                        <option value="" disabled selected>Select Thal type </option>
+                        <option value=0>Normal</option>
+                        <option value=1>Fixed defect</option>
+                        <option value=2>Reversable defect</option>
+
+
+
+                    </select>
+                </div>
+
+
+                
+                
+                <div class = "input_field">
+                    <input type="submit" class = "submit">
+                </div>
+                
+
+            
+            </form>
+    <center>
+        <div style="align:center;">
+            <h2 style="font-family:courier;color:{{clr}}">{{res}}</h2>
+                </div>
+        <br><br><br><br>
+    </center>
+    </div>
+
+    </body>
+</html>

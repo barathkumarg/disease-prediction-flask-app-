@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap');
+*{
+    margin: 0px;
+}
+header{
+    text-align: center;
+    padding: 20px;
+    background-color: #1fa07b;
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    color:white;
+    letter-spacing: 2px;
+   
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    width: 50%;
+}
+
+.navigation-bar {
+    display: flex;
+
+}
+
+.alone{
+    color:#3ae0b1;
+    text-align:center;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Heebo', sans-serif;
+    letter-spacing: 1.5px;
+    padding:20px;
+}
+
+.many
+{
+    
+    background-color: #3ae0b1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Heebo', sans-serif;
+    letter-spacing: 1.5px;
+    color:white;
+    padding: 20px;
+}
+
+ 

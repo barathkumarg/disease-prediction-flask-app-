@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heart Disease | Test for many</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='thirdStyles.css')}}">
+    <style>
+        .choose-file
+        {
+          width: 500px;
+          height: 500px;
+         
+          margin-top: 30px;
+        }
+        input[type = "file"]
+        {
+          display:none;
+        }
+        input[type="file"] { 
+            z-index: -1;
+            position: absolute;
+            opacity: 0;
+          }
+  
+          input:focus + label {
+            outline: 2px solid;
+          }
+          .Upload-file
+          {
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(47, 169, 218);
+          }
+          button[type = "submit"]
+          {
+            border: none;
+            background-color: #3ae0b1;
+            
+            margin-top: 40px;
+            font-size: 20px;
+            color: white;
+            padding-left: 80px;
+            padding-right: 80px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 15px;
+          }
+          .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {background-color: #e600e6;}
+       </style>
+  </head>
+
+  <body>
+    <header>HEART DISEASE
+    <div style="float:right;"><a href="/"><button class="button button2"> Back</button></a></div></header>
+    </header>
+        
+        <div class="navigation-bar">
+            <a href="heart_disease"><div class = "alone">Test for alone</div></a>
+            <a href="heart_disease_many"><div class = "many">Test for many</div></a>
+        </div>
+        <form action="{{ url_for('predict_heart_many')}}" method="post" enctype="multipart/form-data">
+            <center>
+              <div class= "choose-file" >
+                  <input type = "file" name="file" id="file-upload" multiple required />
+                  <label for = "file-upload">
+                    <img src="{{url_for('static', filename='choose_file.png')}}" width="200px" height="150px" style="margin-top: 100px;cursor: pointer;">
+                    <div id="file-upload-filename" class = "Upload-file">Choose file</div>
+                  </label>  
+                  <button type = "submit">Submit</button>
+              </div>
+          </center>
+          </form>
+
+
+    <div style="font-family:courier;font-size:24px">
+        <div style="width: 50%; float:left">
+
+<h4 style="font-family:courier;font-size:24px;color:red;">{{a}}</h4>
+<ol>
+<!-- For loop logic of jinja template -->
+{%for i in positive%}
+
+    <li>{{i}}</li><br>
+{%endfor%}
+
+</ol>
+
+
+
+
+        </div>
+
+       <div style="width: 50%; float:right">
+           <h4 style="font-family:courier;font-size:24px;color:green;">{{b}}</h4>
+           <ol>
+         {%for i in negative%}
+
+   <li> {{i}}</li><br>
+{%endfor%}
+</ol>
+          </div>
+
+    </div>
+          <script>
+            var input = document.getElementById( 'file-upload' );
+            var infoArea = document.getElementById( 'file-upload-filename' );
+  
+            input.addEventListener( 'change', showFileName );
+  
+            function showFileName( event ) {
+  
+              var input = event.srcElement;
+  
+              var fileName = input.files[0].name;
+              infoArea.textContent = 'File name: ' + fileName;
+            }
+          </script>
+  </body>
+</html>

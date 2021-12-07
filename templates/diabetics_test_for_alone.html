@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>Diabetics | Test for alone</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='secondaryStyles.css')}}">
+        <meta name="viewport" content = "width=device-width,initial-scale=1">
+        <!--Styles for the form-->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+            .main_form
+            {
+                width:800px;
+                height:300px;
+                
+                margin-top:50px;
+                margin-left:300px;
+            }
+
+            .title
+            {
+                font-family:"Exo 2";
+                color:grey;
+                font-size:50px;
+                padding-left:180px;
+                margin-top: 20px;
+            }
+
+            input
+            {
+                -moz-border-radius: 15px;
+                border-radius: 30px;
+                border:solid 1px rgba(210, 212, 193);
+                height:50px;
+                width:400px;
+                outline: none;
+                background-color:rgba(210, 212, 193);
+                padding-left: 20px;
+                font-size:15px;
+                font-family: "Balsamiq Sans";
+
+            }
+
+            .input_field
+            {
+                padding-left:225;
+                padding-top:50;
+            }
+            
+            .employees
+            {
+                -moz-border-radius: 15px;
+                border-radius: 30px;
+                border:solid 1px rgba(210, 212, 193);
+                height:50px;
+                width:400px;
+                outline: none;
+                background-color:rgba(210, 212, 193);
+                padding-left: 20px;
+                padding-right:20px;
+                font-size:15px;
+                font-family: "Balsamiq Sans";
+            }
+            .submit
+                {
+                background-color:#3ae0b1;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-bottom:100px;
+                }
+                .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {background-color: #e600e6;}
+
+
+        </style>
+
+    </head>
+    <body>
+        <header>DIABETICS
+        <div style="float:right;"><a href="/"><button class="button button2"> Back</button></a></div></header>
+        </header>
+        
+        <div class="navigation-bar">
+            <a href="diabetics"><div class = "alone">Test for alone</div></a>
+            <a href="diabetics_disease_many"><div class = "many">Test for many</div></a>
+        </div>
+          
+        <!--Form for test for alone-->
+        <form action="{{ url_for('predict_diabetics_alone')}}" method="post" >
+            <div class="main_form"  >
+                <div class = "title">
+                    Test For alone Form
+                </div>
+               
+                <div class="input_field">
+                    <input type="number" placeholder="Enter your age.." name="age" required/>
+                </div>
+                
+                <div class="input_field">
+                    <input type="number" step="0.01"   placeholder="Enter Glucose level (ranges 70-200mg/dl).." name="glucose" required/>
+                </div>
+
+                <div class="input_field">
+                    <input type="number" step="0.01" placeholder="Enter Blood pressure level (ranges 70-140 mm Hg).." name="pressure" required/>
+                </div>
+
+                <div class="input_field">
+                    <input type="number" step="0.01"  placeholder="Enter Skin Thickness level (ranges 20-60 µm).." name="skin" required/>
+                </div>
+                <div class="input_field">
+                    <input type="number"  step="0.01"  placeholder="Enter BMI value (ranges 15-55 kg/m2).." name="bmi" required/>
+                </div>
+
+                <div class="input_field">
+                    <input type="number" step="0.001"  placeholder="Enter Diabetes Pedigree Function value (ranges 0 to 2).." name="pedi" required/>
+                </div>
+                <div class = "input_field">
+                    <input type="submit" class = "submit">
+                </div>
+        </form>
+<center>
+        <div style="align:center;">
+            <h2 style="font-family:courier;color:{{clr}}">{{res}}</h2>
+                </div>
+        <br><br><br><br>
+    </center>
+    </div>
+
+
+    </body>
+</html>
